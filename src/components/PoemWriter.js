@@ -25,7 +25,7 @@ class PoemWriter extends React.Component {
       const secondLine = lines[1].split(' ');
       const thirdLine = lines[2].split(' ');
 
-      (firstLine.length === 5 && secondLine.length === 3 && thirdLine.length === 5) ? valid = true : valid = false
+      (firstLine.length === 5 && firstLine.join(' ').trim().split(' ').length === 5 && secondLine.length === 3 && secondLine.join(' ').trim().split(' ').length === 3 && thirdLine.length === 5 && thirdLine.join(' ').trim().split(' ').length === 5) ? valid = true : valid = false
     }
 
     if (valid) {
